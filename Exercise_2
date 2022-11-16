@@ -1,0 +1,23 @@
+import java.util.Arrays;
+
+public class Exercise_2 {
+    public static void main(String[] args) {
+        int[] numb = new int[30];
+        for (int i = 0; i < numb.length; i++) {
+            numb[i] = (int) (Math.random() * 51);
+            System.out.print("[" + numb[i] + "] ");
+        }
+
+        int max = Arrays.stream(numb)
+                .max()
+                .getAsInt();
+
+        int min = Arrays.stream(numb)
+                .min()
+                .getAsInt();
+
+        System.out.println("\nМинимальный: " + min);
+        System.out.println("Максимальный: " + max);
+    }
+}
+
