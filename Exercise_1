@@ -1,0 +1,15 @@
+import java.util.Arrays;
+
+public class Exercise_1 {
+    public static void main(String[] args) {
+        int n =15;
+        int [] q = new int[n];
+        q[0]= 1;
+        q[1] =1;
+        System.out.print("[" +q[0]+"]["+q[1] + "]");
+        for (int i = 2; i<n;i++){
+            q[i]= q[i- q[i-1]] + q[i- q[i-2]];
+            System.out.print(Arrays.toString(new int[]{q[i]}));
+        }
+    }
+}
